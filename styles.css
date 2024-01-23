@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #023c5b;
+    color: white;
+    padding: 5px;
+    display: flex; /* Use flex display for easy alignment */
+    align-items: center; /* This centers the content vertically */
+}
+
+.header-logo {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Keeps the aspect ratio of the image */
+    margin-left: 10px; /* Adds some space between the logo and the next item */
+    margin-right: 30px; /* Adds some space between the logo and the next item */
+}
+
+h2 {
+    margin-bottom: 0; /* Removes the bottom margin */
+    margin-top: 8px; /* Moves h2 slightly higher; adjust as needed */
+}
+
+header h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 65px); /* Subtracting header and footer heights */
+}
+
+.sidebar {
+    flex: 0 0 200px; /* The sidebar will not grow or shrink and will have a fixed width of 200px */
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-right: 1px solid #e0e0e0;
+}
+
+main {
+    flex: 1;
+    padding: 15px;
+    position: relative;  /* Added this to contain the absolutely positioned viewDiv */
+}
+
+#viewDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
