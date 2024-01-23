@@ -25,34 +25,32 @@ require([
     });
     
     // Add FeatureLayers
-
-    layer0 = new FeatureLayer({
-        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/0"
-    });
-
-    map.add(layer0);
-   
-
-    layer1 = new FeatureLayer({
-        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/1"
-    });
-
-    map.add(layer1);
-   
     
     layer2 = new FeatureLayer({
         url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/2"
     });
 
     map.add(layer2);
+
+    layer1 = new FeatureLayer({
+        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/1"
+    });
+
+    map.add(layer1);
     
+    layer0 = new FeatureLayer({
+        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/0"
+    });
+
+    map.add(layer0);
+   
     // CREATE LEGEND WIDGET
     const legend = new Legend({
         view: view,
         layerInfos: [
-                      { layer: layer0, title: 'Qualifying Local Bus'},
-                      { layer: layer1, title: 'Existing Transit'    },
-                      { layer: layer2, title: 'Planned Transit'     }
+                      { layer: layer0, title: 'Existing Transit'    },
+                      { layer: layer1, title: 'Planned Transit'     },
+                      { layer: layer2, title: 'Qualifying Local Bus'}
                     ]
     });
     view.ui.add(legend, "top-right");
