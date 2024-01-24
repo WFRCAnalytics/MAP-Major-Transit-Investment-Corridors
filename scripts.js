@@ -26,20 +26,22 @@ require([
     
     // Add FeatureLayers
     
+    const _fsname = "https://services1.arcgis.com/taguadKoI1XFwivx/arcgis/rest/services/MTIC_Jan2024_WFL1/FeatureServer";
+
     layer2 = new FeatureLayer({
-        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/2"
+        url: _fsname + "/2"
     });
 
     map.add(layer2);
 
     layer1 = new FeatureLayer({
-        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/1"
+        url: _fsname + "/1"
     });
 
     map.add(layer1);
     
     layer0 = new FeatureLayer({
-        url: "https://services1.arcgis.com/taguadKoI1XFwivx/ArcGIS/rest/services/MTIC_WebMap_WFL1/FeatureServer/0"
+        url: _fsname + "/0"
     });
 
     map.add(layer0);
