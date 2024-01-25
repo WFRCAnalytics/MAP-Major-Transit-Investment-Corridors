@@ -34,16 +34,20 @@ header h2 {
 }
 
 .sidebar {
-    flex: 0 0 200px; /* The sidebar will not grow or shrink and will have a fixed width of 200px */
+    flex: 0 0 700px; /* The sidebar will not grow or shrink and will have a fixed width of 500px */
     background-color: #f7f7f7;
     padding: 15px;
     border-right: 1px solid #e0e0e0;
+    height: calc(100vh - 95px); /* Set the height of the sidebar to fill the viewport height, subtracting the header/footer height */
+    overflow-y: auto; /* Add a vertical scrollbar if the content overflows */
 }
+
 
 main {
     flex: 1;
     padding: 15px;
     position: relative;  /* Added this to contain the absolutely positioned viewDiv */
+
 }
 
 #viewDiv {
@@ -52,5 +56,23 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    height: calc(100vh - 65px); /* Set the height of the sidebar to fill the viewport height, subtracting the header/footer height */
+
 }
 
+.indented {
+    margin-bottom: 0; /* Removes the bottom margin */
+    /* Your existing styles for .indented */
+    padding-left: 20px; /* Adjust as needed for indent */
+}
+
+.main-points {
+    margin-top: 0; /* Removes the top margin */
+    list-style-type: lower-alpha; /* a, b, c */
+    padding-left: 40px; /* Adjust as needed for indent */
+}
+
+.sub-points {
+    list-style-type: lower-roman; /* i, ii */
+    padding-left: 40px; /* Adjust as needed for double indent */
+}
