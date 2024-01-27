@@ -9,7 +9,15 @@ header {
     color: white;
     padding: 5px;
     display: flex; /* Use flex display for easy alignment */
-    align-items: center; /* This centers the content vertically */
+    align-items: flex-start; /* This aligns the content to the top */
+}
+
+header a {
+    padding-left: 100px;
+    color: lightblue; /* This will set the color of links to white */
+    /*text-decoration: none; /* Optional: Removes the underline from links */
+    margin-top: 20px; /* Moves h2 slightly higher; adjust as needed */
+
 }
 
 .header-logo {
@@ -25,6 +33,7 @@ h2 {
 }
 
 header h2 {
+    margin-top: 15px; /* Moves h2 slightly higher; adjust as needed */
     font-family: 'Roboto', sans-serif;
 }
 
