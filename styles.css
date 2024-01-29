@@ -42,15 +42,12 @@ header h2 {
     min-height: calc(100vh - 65px); /* Subtracting header and footer heights */
 }
 
-.sidebar {
-    flex: 0 0 700px; /* The sidebar will not grow or shrink and will have a fixed width of 500px */
-    background-color: #f7f7f7;
-    padding: 15px;
-    border-right: 1px solid #e0e0e0;
-    height: calc(100vh - 95px); /* Set the height of the sidebar to fill the viewport height, subtracting the header/footer height */
-    overflow-y: auto; /* Add a vertical scrollbar if the content overflows */
+.scenario-selector-container {
+    width: 500px;
+    background-color: rgba(225, 225, 255, 0.95); /* White background with 25% transparency */
+    padding: 10px;
+    overflow: auto; /* Add scroll overflow */
 }
-
 
 main {
     flex: 1;
